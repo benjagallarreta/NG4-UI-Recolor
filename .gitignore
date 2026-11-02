@@ -1,13 +1,5 @@
-# Copia de seguridad de los archivos del juego (588 MB, no versionar)
-backup/original/
-
-# Python
 __pycache__/
 *.pyc
 
-# Salida generada por build_mod.py
-mod/cambios_colores.tsv
-
-# Futuro empaquetado (PyInstaller)
 build/
 dist/
