@@ -17,6 +17,10 @@
   (alerts keep their original red by default).
 - Shows a preview before applying.
 
+### Download
+Get `NG4 UI Recolor.exe` from the [Releases](https://github.com/benjagallarreta/NG4-UI-Recolor/releases) page
+or from Nexus Mods (https://www.nexusmods.com/ninjagaidenfour/mods/128).
+
 ### How to use it
 1. Close the game.
 2. Open `NG4 UI Recolor.exe`. Nothing is installed.
@@ -33,7 +37,17 @@ To go back to the original red, click **Restore originals**.
 - Tested on the Steam version. Other versions have not been tested yet: if you try one, let us know.
 - After a game update, use *Verify integrity of game files* in Steam, delete the `backup` folder
   and apply your color again.
-- Some antivirus programs may warn about the exe because it is not digitally signed.
+- Some antivirus programs may warn about the exe: it is not digitally signed and it is packaged with
+  PyInstaller, which often causes false positives. The full source code is in this repository, and you
+  can check the [VirusTotal scan](https://www.virustotal.com/gui/file/0083ef64c8b0a974f286c41f59281a8a4446dda2c50607b86e96b123b867b146) of v1.0 or build the exe yourself.
+
+### Build from source
+Requires Windows and Python 3 (only the standard library is used at runtime).
+```
+pip install pyinstaller
+python build_exe.py
+```
+The exe is created in `dist\`. You can also run the tool without building it: `python src\gui.py`.
 
 Unofficial fan mod, not affiliated with Koei Tecmo or Team NINJA.
 
@@ -49,6 +63,10 @@ Unofficial fan mod, not affiliated with Koei Tecmo or Team NINJA.
 - Opcional: intro y logo, partículas de los menús, iconos de armas y ninpo, y alertas de gameplay
   (las alertas conservan su rojo original por defecto).
 - Muestra una vista previa antes de aplicar.
+
+### Descarga
+Descargá `NG4 UI Recolor.exe` desde la página de [Releases](https://github.com/benjagallarreta/NG4-UI-Recolor/releases)
+o desde Nexus Mods (https://www.nexusmods.com/ninjagaidenfour/mods/128).
 
 ### Cómo se usa
 1. Cerrá el juego.
@@ -66,7 +84,17 @@ junto al exe. Para volver al rojo original, hacé clic en **Restaurar originales
 - Probado en la versión de Steam. Las demás versiones todavía no se probaron: si lo usás en otra, contanos.
 - Después de una actualización del juego, usá *Verificar integridad de los archivos* en Steam, borrá
   la carpeta `backup` y volvé a aplicar tu color.
-- Algunos antivirus pueden advertir sobre el exe porque no tiene firma digital.
+- Algunos antivirus pueden advertir sobre el exe: no tiene firma digital y está empaquetado con
+  PyInstaller, que suele dar falsos positivos. El código fuente completo está en este repositorio, y podés
+  ver el [análisis de VirusTotal](https://www.virustotal.com/gui/file/0083ef64c8b0a974f286c41f59281a8a4446dda2c50607b86e96b123b867b146) de la v1.0 o compilar el exe vos mismo.
+
+### Compilar desde el código
+Requiere Windows y Python 3 (en ejecución solo se usa la biblioteca estándar).
+```
+pip install pyinstaller
+python build_exe.py
+```
+El exe se genera en `dist\`. También podés usar la herramienta sin compilarla: `python src\gui.py`.
 
 Mod no oficial, sin relación con Koei Tecmo ni Team NINJA.
 
